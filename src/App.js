@@ -2,6 +2,7 @@ import config from './config.js';
 import React, { Component } from 'react';
 
 import Select from './components/Select.js';
+import Checkbox from './components/Checkbox.js';
 
 export default class App extends Component {
 
@@ -56,8 +57,15 @@ export default class App extends Component {
             />
 
 
-          <input type='checkbox' /> С бассейном
-          <input type='checkbox' /> Пешком до пляжа
+          <Checkbox
+            name={this.prepareParam(config.getParams.swimmingPool.name)}
+            title={config.getParams.swimmingPool.title}
+            />
+
+          <Checkbox
+            name={this.prepareParam(config.getParams.nextToBeach.name)}
+            title={config.getParams.nextToBeach.title}
+            />
 
           <a onClick={this.redirectSearchExtend}>Расширенный поиск</a>
 

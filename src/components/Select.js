@@ -1,4 +1,3 @@
-import config from '../config.js';
 import React, { Component } from 'react';
 
 export default class Select extends Component {

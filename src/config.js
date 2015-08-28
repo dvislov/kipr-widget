@@ -100,6 +100,16 @@ export default ({
         { title: 'Троодос', value: 11 },
         { title: 'Никосия', value: 12 }
       ]
+    },
+
+    swimmingPool: {
+      name: 'pool_variant_id',
+      title: 'С бассейном'
+    },
+
+    nextToBeach: {
+      name: 'to_beach',
+      title: 'Пешком до пляжа'
     }
   }
 });
