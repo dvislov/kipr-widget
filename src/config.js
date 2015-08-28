@@ -3,12 +3,21 @@ export default ({
   searchPath: '/arenda/search/results',
   searchPathExternal: '/arenda/search',
 
+  getParamPrefix: 'rent',
+
   getParams: {
-    type: {
+    duration: {
       name: 'availability_category_type',
+      title: 'Длительность проживания',
       values: [
-        { short: 'Для отдыха, €/нед.' },
-        { long: 'От года и более, €/мес.'}
+        {
+          title: 'Для отдыха, €/нед.',
+          name: 'short'
+        },
+        {
+          title: 'От года и более, €/мес.',
+          name: 'long'
+        }
       ]
     }
   }
