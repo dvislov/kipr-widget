@@ -9,7 +9,7 @@ export default class Checkbox extends Component {
   render() {
     return (
       <label>
-        <input type='checkbox' name='{this.props.name}' />
+        <input type='checkbox' name={this.props.name} value={this.props.value} />
         {this.props.title}
       </label>
     );

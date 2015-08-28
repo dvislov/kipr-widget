@@ -60,11 +60,13 @@ export default class App extends Component {
           <Checkbox
             name={this.prepareParam(config.getParams.swimmingPool.name)}
             title={config.getParams.swimmingPool.title}
+            value={config.getParams.swimmingPool.value}
             />
 
           <Checkbox
             name={this.prepareParam(config.getParams.nextToBeach.name)}
             title={config.getParams.nextToBeach.title}
+            value={config.getParams.nextToBeach.value}
             />
 
           <a onClick={this.redirectSearchExtend}>Расширенный поиск</a>

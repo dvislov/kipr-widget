@@ -104,12 +104,14 @@ export default ({
 
     swimmingPool: {
       name: 'pool_variant_id',
-      title: 'С бассейном'
+      title: 'С бассейном',
+      value: '1'
     },
 
     nextToBeach: {
       name: 'to_beach',
-      title: 'Пешком до пляжа'
+      title: 'Пешком до пляжа',
+      value: '1'
     }
   }
 });
