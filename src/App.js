@@ -25,26 +25,37 @@ export default class App extends Component {
             options={config.getParams.duration.values}
             />
 
-          От
-          <select>
-            <option></option>
-          </select>
-          До
-          <select>
-            <option></option>
-          </select>
-          Спален
-          <select>
-            <option></option>
-          </select>
-          Тип
-          <select>
-            <option></option>
-          </select>
-          Регион
-          <select>
-            <option></option>
-          </select>
+          <Select
+            name={this.prepareParam(config.getParams.priceFrom.name)}
+            title={config.getParams.priceFrom.title}
+            options={config.getParams.priceFrom.values}
+            />
+
+          <Select
+            name={this.prepareParam(config.getParams.priceTo.name)}
+            title={config.getParams.priceTo.title}
+            options={config.getParams.priceTo.values}
+            />
+
+          <Select
+            name={this.prepareParam(config.getParams.bedrooms.name)}
+            title={config.getParams.bedrooms.title}
+            options={config.getParams.bedrooms.values}
+            />
+
+          <Select
+            name={this.prepareParam(config.getParams.realtyType.name)}
+            title={config.getParams.realtyType.title}
+            options={config.getParams.realtyType.values}
+            />
+
+          <Select
+            name={this.prepareParam(config.getParams.region.name)}
+            title={config.getParams.region.title}
+            options={config.getParams.region.values}
+            />
+
+
           <input type='checkbox' /> С бассейном
           <input type='checkbox' /> Пешком до пляжа
 

@@ -13,7 +13,7 @@ export default class Select extends Component {
         <option value=''>{this.props.title}</option>
 
         {this.props.options.map(function(option) {
-          return <option value={option.name}>{option.title}</option>;
+          return <option value={option.value}>{option.title}</option>;
         })}
 
       </select>
