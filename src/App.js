@@ -1,9 +1,15 @@
+import config from './config.js';
 import React, { Component } from 'react';
 
 export default class App extends Component {
   render() {
     return (
-      <h1>Hello, world.</h1>
+      <div>
+        <h1>Поиск</h1>
+        <select placeholder='Тип'>
+          <option></option>
+        </select>
+      </div>
     );
   }
 }
