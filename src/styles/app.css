@@ -1,4 +1,79 @@
 .widget {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
   background-color: deepskyblue;
-  padding: 20px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.widget__header {
+  font-size: 18px;
+  margin: 0 0 20px;
+  font-weight: 100;
+}
+
+.widget__form {
+  margin: 0;
+}
+
+.widget__row {
+  margin-bottom: 20px;
+}
+
+.widget__row--type-flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.widget__column {
+  width: 50%;
+  box-sizing: border-box;
+}
+.widget__column:first-child {
+  padding-right: 10px;
+}
+.widget__column:last-child {
+  padding-left: 10px;
+}
+
+.widget__select {
+  font-family: Arial, Helvetica, sans-serif;
+  display: block;
+  width: 100%;
+  font-size: 16px;
+  padding: 4px 10px;
+}
+
+.widget__checkbox {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.widget__formActions {
+  border-top: 1px dotted #989898;
+  padding: 20px 0 0;
+}
+
+.widget__extendSearchLink {
+  display: block;
+  color: #1155DD;
+  cursor: pointer;
+  margin: 0 0 20px;
+}
+
+.widget__button {
+  display: block;
+  border: none;
+  text-align: center;
+  border-radius: 3px;
+  width: 100%;
+  margin: 0;
+  height: 24px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(#e4ae00, #d37000);
+}
+
+.widget__button:hover {
+  background: linear-gradient(#d37000, #e4ae00);
 }

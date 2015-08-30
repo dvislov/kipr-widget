@@ -8,7 +8,7 @@ export default class Checkbox extends Component {
 
   render() {
     return (
-      <label>
+      <label className='kipr-widget__checkbox'>
         <input type='checkbox' name={this.props.name} value={this.props.value} />
         {this.props.title}
       </label>
