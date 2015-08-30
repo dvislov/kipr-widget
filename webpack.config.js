@@ -1,7 +1,9 @@
 var path = require('path');
 var webpack = require('webpack');
 
+var postcss   = require('postcss');
 var autoprefixer = require('autoprefixer');
+var classPrfx = require('postcss-class-prefix');
 
 module.exports = {
   devtool: 'eval',
@@ -34,7 +36,8 @@ module.exports = {
     return [
       autoprefixer({
         browsers: ['last 2 versions']
-      })
+      }),
+      classPrfx('kipr-')
     ];
   }
 };

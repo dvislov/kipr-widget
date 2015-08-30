@@ -16,7 +16,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className='kipr-widget'>
         <form method='get' action={config.host + config.searchPath}>
           <h1>Поиск</h1>
 
