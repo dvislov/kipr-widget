@@ -18,6 +18,7 @@ module.exports = {
     publicPath: '/static/'
   },
   plugins: [
+    new webpack.optimize.UglifyJsPlugin({minimize: true}),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin()
   ],
