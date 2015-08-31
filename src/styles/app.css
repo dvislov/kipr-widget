@@ -4,6 +4,8 @@
   background-color: deepskyblue;
   padding: 30px;
   border-radius: 15px;
+  min-width: 220px;
+  box-sizing: border-box;
 }
 
 .widget__header {

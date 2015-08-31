@@ -3,4 +3,10 @@ import App from './App';
 
 require('./styles/app.css');
 
-React.render(<App />, document.getElementById('kiprWidget'));
+function renderToElements(toRender, elements) {
+  for (var i = 0; i < elements.length; i++) {
+    React.render(toRender, elements[i]);
+  }
+}
+
+renderToElements(<App />, document.getElementsByClassName('awesome-widget'));
