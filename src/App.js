@@ -2,7 +2,6 @@ import config from './config.js';
 import React, { Component } from 'react';
 
 import Select from './components/Select.js';
-import Checkbox from './components/Checkbox.js';
 
 export default class App extends Component {
 

@@ -8,14 +8,15 @@ export default class Select extends Component {
 
   render() {
     return (
-      <select name={this.props.name} className='kipr-widget__select'>
-        <option value=''>{this.props.title}</option>
+      <div className='kipr-widget__selectControl'>
+        <label className='kipr-widget__label'>{this.props.title}:</label>
 
-        {this.props.options.map(function(option) {
-          return <option value={option.value}> {option.title} </option>;
-        })}
-
-      </select>
+        <select name={this.props.name} className='kipr-widget__select'>
+          {this.props.options.map(function(option) {
+            return <option value={option.value}> {option.title} </option>;
+          })}
+        </select>
+    </div>
     );
   }
 }
