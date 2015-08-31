@@ -79,3 +79,5 @@
 .widget__button:hover {
   background: linear-gradient(#d37000, #e4ae00);
 }
+
+@import "theme.css";

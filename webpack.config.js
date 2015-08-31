@@ -3,6 +3,8 @@ var webpack = require('webpack');
 
 var postcss   = require('postcss');
 var autoprefixer = require('autoprefixer');
+var atImport = require('postcss-import');
+var postCSSNested = require('postcss-nested');
 var classPrfx = require('postcss-class-prefix');
 
 module.exports = {
@@ -38,7 +40,11 @@ module.exports = {
       autoprefixer({
         browsers: ['last 2 versions']
       }),
-      classPrfx('kipr-')
+      classPrfx('kipr-'),
+      atImport({
+        from: './src/styles/app.css'
+      }),
+      postCSSNested()
     ];
   }
 };
