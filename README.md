@@ -12,7 +12,7 @@ webpack
 ```
 <div class="awesome-widget"></div> <!-- Дефолтный скин (синий) -->
 или
-<div class="awesome-widget"></div> <!-- Дополнительный скин (жёлтый) -->
+<div class="awesome-widget awesome-widget--theme-gold"></div> <!-- Дополнительный скин (жёлтый) -->
 
 <script src="bundle.js"></script>
 ```
