@@ -1,117 +1,133 @@
 export default ({
-  host: 'http://kipr.ru',
-  searchPath: '/arenda/search/results',
-  searchPathExternal: '/arenda/search',
+  host: 'http://stg.realty.kipr.ru',
 
-  getParamPrefix: 'rent',
+  searchPathRent: '/rent/search/results',
+  searchPathRentLong: '/long-term-rentals/search/results',
+  searchPathSale: '/sale/search/results',
+
+  searchPathExternal: '/rent/search/results',
+
+  getParamPrefix: 'rent_search_form',
+  getParamPrefixSale: 'sale_search_form',
 
   getParams: {
     duration: {
       name: 'availability_category_type',
-      title: 'Длительность проживания',
+      title: 'Вариант аренды',
       values: [
-        { title: 'Для отдыха, €/нед.', value: 'short' },
-        { title: 'От года и более, €/мес.', value: 'long' }
-      ]
-    },
-
-    priceFrom: {
-      name: 'price_from',
-      title: 'Цена, от',
-      values: [
-        { title: 'Не важно', value: 3000 },
-        { title: '400', value: 40000 },
-        { title: '500', value: 50000 },
-        { title: '600', value: 60000 },
-        { title: '800', value: 80000 },
-        { title: '1\'000', value: 100000 },
-        { title: '1\'200', value: 120000 },
-        { title: '1\'300', value: 130000 },
-        { title: '1\'400', value: 140000 },
-        { title: '1\'600', value: 160000 },
-        { title: '1\'800', value: 180000 },
-        { title: '2\'000', value: 200000 },
-        { title: '2\'500', value: 250000 },
-        { title: '3\'000', value: 300000 },
-        { title: '5\'000', value: 500000 },
-        { title: '10\'000', value: 1000000 },
-        { title: '15\'000', value: 1500000 },
-      ]
-    },
-
-    priceTo: {
-      name: 'price_to',
-      title: 'Цена, до',
-      values: [
-        { title: 'Не важно', value: 3000 },
-        { title: '400', value: 40000 },
-        { title: '500', value: 50000 },
-        { title: '600', value: 60000 },
-        { title: '800', value: 80000 },
-        { title: '1\'000', value: 100000 },
-        { title: '1\'200', value: 120000 },
-        { title: '1\'300', value: 130000 },
-        { title: '1\'400', value: 140000 },
-        { title: '1\'600', value: 160000 },
-        { title: '1\'800', value: 180000 },
-        { title: '2\'000', value: 200000 },
-        { title: '2\'500', value: 250000 },
-        { title: '3\'000', value: 300000 },
-        { title: '5\'000', value: 500000 },
-        { title: '10\'000', value: 1000000 },
-        { title: '15\'000', value: 1500000 }
+        { title: 'Аренда', value: '' },
+        { title: 'Год и более', value: '' },
+        { title: 'Продажа', value: '' }
       ]
     },
 
     bedrooms: {
-      name: 'beds',
-      title: 'Спален',
+      name: 'bedrooms',
+      title: 'Спальни',
       values: [
         { title: '1', value: 1 },
         { title: '2', value: 2 },
-        { title: '2 и более', value: '>=2' },
         { title: '3', value: 3 },
-        { title: '3 и более', value: '>=3' },
         { title: '4', value: 4 },
-        { title: '5 и более', value: '>=5' }
+        { title: '5', value: 5 },
+        { title: '6', value: 6 }
       ]
     },
 
+    beds: {
+      name: 'sleeps_max',
+      title: 'Спальных мест',
+      values: [
+        { title: '1', value: 1 },
+        { title: '2', value: 2 },
+        { title: '3', value: 3 },
+        { title: '4', value: 4 },
+        { title: '5', value: 5 },
+        { title: '6', value: 6 },
+        { title: '7', value: 7 },
+        { title: '8', value: 8 },
+        { title: '9', value: 9 },
+        { title: '10', value: 10 },
+        { title: '11', value: 11 },
+        { title: '12', value: 12 },
+        { title: '13', value: 13 },
+        { title: '14', value: 14 },
+        { title: '15', value: 15 }
+      ]
+    },
+
+    checkInDate: {
+      name: 'check_in_date',
+      title: 'Дата заезда'
+    },
+
     realtyType: {
-      name: 'group_variant_id',
+      name: 'variant_id',
       title: 'Тип недвижимости',
       values: [
-        { title: 'Дома', value: 1280 },
-        { title: 'Апартаменты', value: 1291 }
+        { title: 'Апартаменты', value: 1292 },
+        { title: 'Бунгало', value: 1283 },
+        { title: 'Вилла', value: 1285 },
+        { title: 'Мезонет', value: 1299 },
+        { title: 'Смежный дом', value: 1286 }
       ]
     },
 
     region: {
-      name: 'geo_id',
+      name: 'region_geo_id',
       title: 'Регион',
       values: [
-        { title: 'Лимассол', value: 6 },
-        { title: 'Пафос', value: 7 },
-        { title: 'Ларнака', value: 5 },
-        { title: 'Айа-Напа', value: 4 },
-        { title: 'Протарас', value: 9 },
-        { title: 'Фамагуста', value: 10 },
-        { title: 'Полис', value: 8 },
-        { title: 'Троодос', value: 11 },
-        { title: 'Никосия', value: 12 }
+        { title: 'Все варианты', value: '' },
+        { title: 'Айа-Напа', value: 280 },
+        { title: 'Ларнака', value: 281 },
+        { title: 'Лимассол', value: 282 },
+        { title: 'Никосия', value: 288 },
+        { title: 'Паралимни', value: 286 },
+        { title: 'Пафос', value: 283 },
+        { title: 'Полис', value: 284 },
+        { title: 'Протарас', value: 285 },
+        { title: 'Троодос', value: 287 }
       ]
     },
 
-    swimmingPool: {
-      name: 'pool_variant_id',
-      title: 'С бассейном',
-      value: '1'
-    },
-
-    nextToBeach: {
-      name: 'to_beach',
-      title: 'Пешком до пляжа',
-      value: '1'
+    daysCount: {
+      name: 'days_count',
+      title: 'Дней отдыха',
+      values: [
+        { title: '3 дня', value: 3 },
+        { title: '4 дня', value: 4 },
+        { title: '5 дней', value: 5 },
+        { title: '6 дней', value: 6 },
+        { title: '7 дней', value: 7 },
+        { title: '8 дней', value: 8 },
+        { title: '9 дней', value: 9 },
+        { title: '10 дней', value: 10 },
+        { title: '11 дней', value: 11 },
+        { title: '12 дней', value: 12 },
+        { title: '13 дней', value: 13 },
+        { title: '14 дней', value: 14 },
+        { title: '15 дней', value: 15 },
+        { title: '16 дней', value: 16 },
+        { title: '17 дней', value: 17 },
+        { title: '18 дней', value: 18 },
+        { title: '19 дней', value: 19 },
+        { title: '20 дней', value: 20 },
+        { title: '21 день', value: 21 },
+        { title: '22 дня', value: 22 },
+        { title: '23 дня', value: 23 },
+        { title: '24 дня', value: 24 },
+        { title: '25 дней', value: 25 },
+        { title: '26 дней', value: 26 },
+        { title: '27 дней', value: 27 },
+        { title: '28 дней', value: 28 },
+        { title: '29 дней', value: 29 },
+        { title: '30 дней', value: 30 },
+        { title: '1 месяц', value: 30 },
+        { title: '1,5 месяца', value: 45 },
+        { title: '2 месяца', value: 60 },
+        { title: '2,5 месяца', value: 75 },
+        { title: '3 месяца', value: 90 }
+      ]
     }
   }
 });
