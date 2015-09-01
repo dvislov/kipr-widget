@@ -35,6 +35,10 @@ module.exports = {
     {
       test: /\.css$/,
       loader: 'style-loader!css-loader!postcss-loader'
+    },
+    {
+      test: /\.svg$/,
+      loader: 'url-loader?limit=8192'
     }]
   },
   postcss: function () {

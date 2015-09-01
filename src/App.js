@@ -122,7 +122,7 @@ export default class App extends Component {
 
           <div className='kipr-widget__row kipr-widget__row--type-flex'>
             <div className='kipr-widget__column'>
-              <div className='kipr-widget__formControl'>
+              <div className='kipr-widget__formControl kipr-widget__formControl--type-date'>
                 <label className='kipr-widget__label'>{config.getParams.checkInDate.title}:</label>
                 <DatePicker
                   disabled={this.state.sale}

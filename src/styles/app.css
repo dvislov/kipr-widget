@@ -51,6 +51,20 @@
   }
 }
 
+.widget__formControl--type-date {
+  position: relative;
+  &::after {
+    content: '';
+    right: 3px;
+    bottom: 3px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    position: absolute;
+    background: url(../svg/calendar.svg) 0 0 no-repeat;
+  }
+}
+
 .widget__select {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
