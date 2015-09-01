@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 
 import Select from './components/Select.js';
 import RentSelect from './components/RentSelect.js';
+
+import moment from 'moment';
 import DatePicker from 'react-datepicker';
 
 export default class App extends Component {
@@ -113,6 +115,7 @@ export default class App extends Component {
                 <DatePicker
                   className='kipr-widget__input'
                   dateFormat="DD.MM.YYYY"
+                  minDate={moment()}
                   name={this.prepareParam(config.getParams.checkInDate.name)}
                   locale="ru"
                    />
