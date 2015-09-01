@@ -46,6 +46,12 @@
   padding: 4px 10px;
 }
 
+.widget__input {
+  display: block;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .widget__label {
   font-size: 12px;
   display: block;

@@ -13,7 +13,8 @@ export default class App extends Component {
     this.redirectSearchExtend = this.redirectSearchExtend.bind(this);
 
     this.state = {
-      formActionUrl: config.formActionUrls.rentShort
+      formActionUrl: config.formActionUrls.rentShort,
+      paramGetPrefix: config.paramGetPrefixRent
     };
   }
 
@@ -22,25 +23,32 @@ export default class App extends Component {
   }
 
   prepareParam (name) {
-    return config.getParamPrefix + '[' + name +']';
+    return this.state.paramGetPrefix + '[' + name +']';
   }
 
   changeFormActionUrl (selectValue) {
     let newUrl = config.searchPathExternal;
+    let newPrefix = config.paramGetPrefixRent;
 
     switch (selectValue) {
       case 'short_rent':
         newUrl = config.formActionUrls.rentShort;
+        newPrefix = config.paramGetPrefixRent;
         break;
       case 'long_rent':
         newUrl = config.formActionUrls.rentLong;
+        newPrefix = config.paramGetPrefixRent;
         break;
       case 'sale':
         newUrl = config.formActionUrls.sale;
+        newPrefix = config.paramGetPrefixSale;
         break;
     };
 
-    this.setState({formActionUrl: newUrl});
+    this.setState({
+      formActionUrl: newUrl,
+      paramGetPrefix: newPrefix
+    });
   }
 
   render() {
@@ -100,7 +108,10 @@ export default class App extends Component {
 
           <div className='kipr-widget__row kipr-widget__row--type-flex'>
             <div className='kipr-widget__column'>
-              Here is Datepicker
+              <div className='kipr-widget__formControl'>
+                <label className='kipr-widget__label'>{config.getParams.checkInDate.title}:</label>
+                <input type='date' className='kipr-widget__input' name={this.prepareParam(config.getParams.checkInDate.name)} />
+              </div>
             </div>
             <div className='kipr-widget__column'>
               <Select

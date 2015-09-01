@@ -9,8 +9,8 @@ export default ({
 
   searchPathExternal: '/rent/search/results',
 
-  getParamPrefix: 'rent_search_form',
-  getParamPrefixSale: 'sale_search_form',
+  paramGetPrefixRent: 'rent_search_form',
+  paramGetPrefixSale: 'sale_search_form',
 
   getParams: {
     duration: {
@@ -27,6 +27,7 @@ export default ({
       name: 'bedrooms',
       title: 'Спальни',
       values: [
+        { title: 'Не важно', value: '' },
         { title: '1', value: 1 },
         { title: '2', value: 2 },
         { title: '3', value: 3 },
@@ -40,6 +41,7 @@ export default ({
       name: 'sleeps_max',
       title: 'Спальных мест',
       values: [
+        { title: 'Не важно', value: '' },
         { title: '1', value: 1 },
         { title: '2', value: 2 },
         { title: '3', value: 3 },
@@ -96,6 +98,7 @@ export default ({
       name: 'days_count',
       title: 'Дней отдыха',
       values: [
+        { title: 'Не важно', value: '' },
         { title: '3 дня', value: 3 },
         { title: '4 дня', value: 4 },
         { title: '5 дней', value: 5 },
