@@ -17,7 +17,8 @@ export default class App extends Component {
 
     this.state = {
       formActionUrl: config.formActionUrls.rentShort,
-      paramGetPrefix: config.paramGetPrefixRent
+      paramGetPrefix: config.paramGetPrefixRent,
+      sale: false
     };
   }
 
@@ -32,6 +33,7 @@ export default class App extends Component {
   changeFormActionUrl (selectValue) {
     let newUrl = config.searchPathExternal;
     let newPrefix = config.paramGetPrefixRent;
+    let sale = false;
 
     switch (selectValue) {
       case 'short_rent':
@@ -45,16 +47,24 @@ export default class App extends Component {
       case 'sale':
         newUrl = config.formActionUrls.sale;
         newPrefix = config.paramGetPrefixSale;
+        sale = true;
         break;
     };
 
     this.setState({
       formActionUrl: newUrl,
-      paramGetPrefix: newPrefix
+      paramGetPrefix: newPrefix,
+      sale: sale
     });
   }
 
   render() {
+
+    let realtyTypes = config.getParams.realtyType.values;
+    if (this.state.sale) {
+      realtyTypes = realtyTypes.concat(config.getParams.realtyType.valuesSale);
+    }
+
     return (
       <div className='kipr-widget'>
         <form
@@ -77,7 +87,7 @@ export default class App extends Component {
               <Select
                 name={this.prepareParam(config.getParams.realtyType.name)}
                 title={config.getParams.realtyType.title}
-                options={config.getParams.realtyType.values}
+                options={realtyTypes}
                 />
             </div>
           </div>
