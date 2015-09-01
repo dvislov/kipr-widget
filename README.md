@@ -4,7 +4,7 @@
 ## Использование
 ```
 npm install
-webpack
+webpack -p --config webpack.config.production.js
 ```
 В папке `dist` создастся файл `bundle.js`
 

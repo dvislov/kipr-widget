@@ -10,10 +10,7 @@ var classPrfx = require('postcss-class-prefix');
 var postcssTriangle = require('postcss-triangle');
 
 module.exports = {
-  devtool: 'eval',
   entry: [
-    'webpack-dev-server/client?http://localhost:3000',
-    'webpack/hot/only-dev-server',
     './src/index'
   ],
   output: {
