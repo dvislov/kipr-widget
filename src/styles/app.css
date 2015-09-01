@@ -41,14 +41,23 @@
 .widget__select {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
+  box-sizing: border-box;
   width: 100%;
-  font-size: 16px;
+  font-size: 14px;
   padding: 4px 10px;
+  appearance: none;
+  border-radius: 3px;
+  border: 1px solid #999;
 }
 
 .widget__input {
   display: block;
   width: 100%;
+  font-size: 14px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 3px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -88,4 +97,5 @@
   background: linear-gradient(#d37000, #e4ae00);
 }
 
+@import "datepicker.css";
 @import "theme.css";

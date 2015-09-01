@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import Select from './components/Select.js';
 import RentSelect from './components/RentSelect.js';
+import DatePicker from 'react-datepicker';
 
 export default class App extends Component {
   constructor () {
@@ -52,7 +53,6 @@ export default class App extends Component {
   }
 
   render() {
-    console.log('render!');
     return (
       <div className='kipr-widget'>
         <form
@@ -110,7 +110,12 @@ export default class App extends Component {
             <div className='kipr-widget__column'>
               <div className='kipr-widget__formControl'>
                 <label className='kipr-widget__label'>{config.getParams.checkInDate.title}:</label>
-                <input type='date' className='kipr-widget__input' name={this.prepareParam(config.getParams.checkInDate.name)} />
+                <DatePicker
+                  className='kipr-widget__input'
+                  dateFormat="DD.MM.YYYY"
+                  name={this.prepareParam(config.getParams.checkInDate.name)}
+                  locale="ru"
+                   />
               </div>
             </div>
             <div className='kipr-widget__column'>
