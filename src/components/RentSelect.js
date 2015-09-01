@@ -19,7 +19,7 @@ export default class RentSelect extends Component {
 
         <select
           ref='rentType'
-          name={this.props.name}
+          name={this.props.sale ? '' : this.props.name}
           className='kipr-widget__select'
           onChange={this.handleChange} >
 

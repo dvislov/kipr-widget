@@ -78,6 +78,7 @@ export default class App extends Component {
             <div className='kipr-widget__column'>
               <RentSelect
                 name={this.prepareParam(config.getParams.duration.name)}
+                sale={this.state.sale}
                 title={config.getParams.duration.title}
                 options={config.getParams.duration.values}
                 onChange={this.changeFormActionUrl}
@@ -111,6 +112,7 @@ export default class App extends Component {
             </div>
             <div className='kipr-widget__column'>
               <Select
+                disabled={this.state.sale}
                 name={this.prepareParam(config.getParams.beds.name)}
                 title={config.getParams.beds.title}
                 options={config.getParams.beds.values}
@@ -123,9 +125,11 @@ export default class App extends Component {
               <div className='kipr-widget__formControl'>
                 <label className='kipr-widget__label'>{config.getParams.checkInDate.title}:</label>
                 <DatePicker
+                  disabled={this.state.sale}
                   className='kipr-widget__input'
                   dateFormat="DD.MM.YYYY"
                   minDate={moment()}
+                  placeholder={moment()}
                   name={this.prepareParam(config.getParams.checkInDate.name)}
                   locale="ru"
                    />
@@ -133,6 +137,7 @@ export default class App extends Component {
             </div>
             <div className='kipr-widget__column'>
               <Select
+                disabled={this.state.sale}
                 name={this.prepareParam(config.getParams.daysCount.name)}
                 title={config.getParams.daysCount.title}
                 options={config.getParams.daysCount.values}
