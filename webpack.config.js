@@ -6,6 +6,8 @@ var autoprefixer = require('autoprefixer');
 var atImport = require('postcss-import');
 var postCSSNested = require('postcss-nested');
 var classPrfx = require('postcss-class-prefix');
+var classPrfx = require('postcss-class-prefix');
+var postcssTriangle = require('postcss-triangle');
 
 module.exports = {
   devtool: 'eval',
@@ -37,6 +39,7 @@ module.exports = {
   },
   postcss: function () {
     return [
+      postcssTriangle(),
       autoprefixer({
         browsers: ['last 2 versions']
       }),

@@ -41,3 +41,4 @@ open http://localhost:3000
   * [postcss-class-prefix](https://github.com/thompsongl/postcss-class-prefix)
   * [postcss-import](https://github.com/postcss/postcss-import)
   * [postcss-nested](https://github.com/postcss/postcss-nested)
+  * [postcss-triangle](https://github.com/jedmao/postcss-triangle)

@@ -14,7 +14,7 @@ export default class RentSelect extends Component {
 
   render() {
     return (
-      <div className='kipr-widget__formControl'>
+      <div className='kipr-widget__formControl kipr-widget__formControl--type-select'>
         <label className='kipr-widget__label'>{this.props.title}:</label>
 
         <select

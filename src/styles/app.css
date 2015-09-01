@@ -38,12 +38,25 @@
   padding-left: 10px;
 }
 
+.widget__formControl--type-select {
+  position: relative;
+  &::after {
+    position: absolute;
+    right: 6px;
+    bottom: 9px;
+    content: '';
+    triangle: right-iso pointing-down;
+    width: 10px;
+    background-color: #333;
+  }
+}
+
 .widget__select {
   font-family: Arial, Helvetica, sans-serif;
   display: block;
   box-sizing: border-box;
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
   padding: 4px 10px;
   appearance: none;
   border-radius: 3px;
@@ -53,7 +66,7 @@
 .widget__input {
   display: block;
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
   padding: 4px 10px;
   box-sizing: border-box;
   border: 1px solid #999;
