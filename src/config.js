@@ -1,9 +1,11 @@
 export default ({
   host: 'http://stg.realty.kipr.ru',
 
-  searchPathRent: '/rent/search/results',
-  searchPathRentLong: '/long-term-rentals/search/results',
-  searchPathSale: '/sale/search/results',
+  formActionUrls: {
+    rentShort: '/rent/search/results',
+    rentLong: '/long-term-rentals/search/results',
+    sale: '/sale/search/results'
+  },
 
   searchPathExternal: '/rent/search/results',
 
@@ -12,12 +14,12 @@ export default ({
 
   getParams: {
     duration: {
-      name: 'availability_category_type',
+      name: 'availability_category',
       title: 'Вариант аренды',
       values: [
-        { title: 'Аренда', value: '' },
-        { title: 'Год и более', value: '' },
-        { title: 'Продажа', value: '' }
+        { title: 'Аренда', value: 'short_rent' },
+        { title: 'Год и более', value: 'long_rent' },
+        { title: 'Продажа', value: 'sale' }
       ]
     },
 
