@@ -15,7 +15,7 @@ export default ({
   getParams: {
     duration: {
       name: 'availability_category',
-      title: 'Вариант аренды',
+      title: 'Вариант поиска',
       values: [
         { title: 'Аренда', value: 'short_rent' },
         { title: 'Год и более', value: 'long_rent' },

@@ -131,6 +131,7 @@ export default class App extends Component {
                   minDate={moment()}
                   placeholder={moment()}
                   name={this.prepareParam(config.getParams.checkInDate.name)}
+                  placeholderText='ДД.ММ.ГГГГ'
                   locale="ru"
                    />
               </div>
