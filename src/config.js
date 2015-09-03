@@ -1,5 +1,5 @@
 export default ({
-  host: 'http://stg.realty.kipr.ru',
+  host: 'http://realty.kipr.ru',
 
   formActionUrls: {
     rentShort: '/rent/search/results',
