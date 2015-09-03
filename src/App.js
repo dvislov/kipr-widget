@@ -18,6 +18,7 @@ export default class App extends Component {
     this.state = {
       formActionUrl: config.formActionUrls.rentShort,
       paramGetPrefix: config.paramGetPrefixRent,
+      rentOptionsDisabled: false,
       sale: false
     };
   }
@@ -33,6 +34,7 @@ export default class App extends Component {
   changeFormActionUrl (selectValue) {
     let newUrl = config.searchPathExternal;
     let newPrefix = config.paramGetPrefixRent;
+    let rentOptionsDisabled = false;
     let sale = false;
 
     switch (selectValue) {
@@ -43,10 +45,12 @@ export default class App extends Component {
       case 'long_rent':
         newUrl = config.formActionUrls.rentLong;
         newPrefix = config.paramGetPrefixRent;
+        rentOptionsDisabled = true;
         break;
       case 'sale':
         newUrl = config.formActionUrls.sale;
         newPrefix = config.paramGetPrefixSale;
+        rentOptionsDisabled = true;
         sale = true;
         break;
     };
@@ -54,6 +58,7 @@ export default class App extends Component {
     this.setState({
       formActionUrl: newUrl,
       paramGetPrefix: newPrefix,
+      rentOptionsDisabled: rentOptionsDisabled,
       sale: sale
     });
   }
@@ -112,7 +117,7 @@ export default class App extends Component {
             </div>
             <div className='kipr-widget__column'>
               <Select
-                disabled={this.state.sale}
+                disabled={this.state.rentOptionsDisabled}
                 name={this.prepareParam(config.getParams.beds.name)}
                 title={config.getParams.beds.title}
                 options={config.getParams.beds.values}
@@ -125,7 +130,7 @@ export default class App extends Component {
               <div className='kipr-widget__formControl kipr-widget__formControl--type-date'>
                 <label className='kipr-widget__label'>{config.getParams.checkInDate.title}:</label>
                 <DatePicker
-                  disabled={this.state.sale}
+                  disabled={this.state.rentOptionsDisabled}
                   className='kipr-widget__input'
                   dateFormat="DD.MM.YYYY"
                   minDate={moment()}
@@ -138,7 +143,7 @@ export default class App extends Component {
             </div>
             <div className='kipr-widget__column'>
               <Select
-                disabled={this.state.sale}
+                disabled={this.state.rentOptionsDisabled}
                 name={this.prepareParam(config.getParams.daysCount.name)}
                 title={config.getParams.daysCount.title}
                 options={config.getParams.daysCount.values}
