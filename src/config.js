@@ -17,8 +17,8 @@ export default ({
       name: 'availability_category',
       title: 'Вариант поиска',
       values: [
-        { title: 'Аренда', value: 'short_rent' },
-        { title: 'Год и более', value: 'long_rent' },
+        { title: 'Арендовать', value: 'short_rent' },
+        { title: 'Аренда от года', value: 'long_rent' },
         { title: 'Покупка', value: 'sale' }
       ]
     },
