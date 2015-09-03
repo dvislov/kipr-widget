@@ -13,7 +13,7 @@ export default class App extends Component {
 
     this.prepareParam = this.prepareParam.bind(this);
     this.changeFormActionUrl = this.changeFormActionUrl.bind(this);
-    this.redirectSearchExtend = this.redirectSearchExtend.bind(this);
+    this.sendQuery = this.sendQuery.bind(this);
 
     this.state = {
       formActionUrl: config.formActionUrls.rentShort,
@@ -23,8 +23,8 @@ export default class App extends Component {
     };
   }
 
-  redirectSearchExtend () {
-    window.location.href = config.host + config.searchPathExternal;
+  sendQuery () {
+    window.location.href = config.host + config.sendQueryPath;
   }
 
   prepareParam (name) {
@@ -152,7 +152,7 @@ export default class App extends Component {
           </div>
 
           <div className='kipr-widget__formActions'>
-            <a className='kipr-widget__extendSearchLink' onClick={this.redirectSearchExtend}>Расширенный поиск</a>
+            <a className='kipr-widget__extendSearchLink' onClick={this.sendQuery}>Послать запрос</a>
 
             <button className='kipr-widget__button' type='submit'>Найти</button>
           </div>

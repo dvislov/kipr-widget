@@ -7,7 +7,7 @@ export default ({
     sale: '/sale/search/results'
   },
 
-  searchPathExternal: '/rent/search/results',
+  sendQueryPath: '/realty_requests/new',
 
   paramGetPrefixRent: 'rent_search_form',
   paramGetPrefixSale: 'sale_search_form',
