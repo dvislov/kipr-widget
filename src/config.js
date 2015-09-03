@@ -19,7 +19,7 @@ export default ({
       values: [
         { title: 'Аренда', value: 'short_rent' },
         { title: 'Год и более', value: 'long_rent' },
-        { title: 'Продажа', value: 'sale' }
+        { title: 'Покупка', value: 'sale' }
       ]
     },
 
