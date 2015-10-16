@@ -71,7 +71,9 @@ export default ({
       values: [
         { title: 'Апартаменты', value: 1292 },
         { title: 'Вилла', value: 1285 },
-        { title: 'Мезонет', value: 1299 },
+        { title: 'Мезонет', value: 1299 }
+      ],
+      valuesLong: [
         { title: 'Смежный дом', value: 1286 }
       ],
       valuesSale: [

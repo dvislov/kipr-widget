@@ -19,6 +19,7 @@ export default class App extends Component {
       formActionUrl: config.formActionUrls.rentShort,
       paramGetPrefix: config.paramGetPrefixRent,
       rentOptionsDisabled: false,
+      longRent: false,
       sale: false
     };
   }
@@ -35,6 +36,7 @@ export default class App extends Component {
     let newUrl = config.searchPathExternal;
     let newPrefix = config.paramGetPrefixRent;
     let rentOptionsDisabled = false;
+    let longRent = false;
     let sale = false;
 
     switch (selectValue) {
@@ -46,11 +48,13 @@ export default class App extends Component {
         newUrl = config.formActionUrls.rentLong;
         newPrefix = config.paramGetPrefixRent;
         rentOptionsDisabled = true;
+        longRent = true;
         break;
       case 'sale':
         newUrl = config.formActionUrls.sale;
         newPrefix = config.paramGetPrefixSale;
         rentOptionsDisabled = true;
+        longRent = true;
         sale = true;
         break;
     };
@@ -59,6 +63,7 @@ export default class App extends Component {
       formActionUrl: newUrl,
       paramGetPrefix: newPrefix,
       rentOptionsDisabled: rentOptionsDisabled,
+      longRent: longRent,
       sale: sale
     });
   }
@@ -66,6 +71,11 @@ export default class App extends Component {
   render() {
 
     let realtyTypes = config.getParams.realtyType.values;
+
+    if (this.state.longRent) {
+      realtyTypes = realtyTypes.concat(config.getParams.realtyType.valuesLong);
+    }
+
     if (this.state.sale) {
       realtyTypes = realtyTypes.concat(config.getParams.realtyType.valuesSale);
     }
